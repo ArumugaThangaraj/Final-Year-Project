@@ -1,37 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector(".login-form");
-    const signupForm = document.querySelector(".signup-form");
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signup");
     const popup = document.querySelector(".popup");
     const overlay = document.querySelector(".overlay");
     const userLogin = document.getElementById("userlogin");
-    const adminLogin = document.getElementById("adminlogin");
     const signupBtn = document.getElementById("signup-link");
     const loginBtn = document.getElementById("login-link");
-    const cancelBtn = document.querySelector(".cancel");
+    const cancelBtn = document.querySelector(".cancel button");
 
-    userLogin.addEventListener("click", () => {
-        showPopup();
-        signupForm.style.display = "none";
-        loginForm.style.display = "block";
-    });
+    // Open login popup
     userLogin.addEventListener("click", () => {
         showPopup();
         signupForm.style.display = "none";
         loginForm.style.display = "block";
     });
 
-    signupBtn.addEventListener("click", () => {
+    // Open signup popup
+    signupBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         showPopup();
         loginForm.style.display = "none";
         signupForm.style.display = "block";
     });
 
-    loginBtn.addEventListener("click", () => {
+    // Back to login from signup
+    loginBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         showPopup();
         signupForm.style.display = "none";
         loginForm.style.display = "block";
     });
 
+    // Cancel button to close popup
     cancelBtn.addEventListener("click", () => hidePopup());
 
     function showPopup() {
@@ -44,25 +44,30 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.display = "none";
     }
 
-    document.getElementById("signup-form").addEventListener("submit", async (event) => {
+    // Signup form submit (dummy)
+    signupForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const username = document.getElementById("signup-username").value;
-        const password = document.getElementById("signup-password").value;
-        
         console.log("Signup Attempt: ", username);
         alert("Signup successful!");
+        hidePopup();
     });
 
-    document.getElementById("login-form").addEventListener("submit", async (event) => {
-        event.preventDefault();
-        const username = document.getElementById("login-username").value;
-        const password = document.getElementById("login-password").value;
-        
-        console.log("Login Attempt: ", username);
-        alert("Login successful! ");
-    });
+    // Login form submit
+    if (loginForm) {
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+
+            console.log("Login Attempt:", email);
+
+            alert("Login successful!");
+
+            // Redirect to user dashboard
+            window.location.href = "../users/userdashboard.html";
+        });
+    } else {
+        console.error("Login form not found!");
+    }
 });
-
-
-
-

@@ -202,5 +202,4 @@ loadMoreBtn?.addEventListener("click", function() {
   fetchNews(currentPage);
 });
 
-// Initial load of news articles
 fetchNews();
