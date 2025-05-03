@@ -15,6 +15,7 @@
 </head>
 
 <body>
+   
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -25,7 +26,7 @@
                         <h2>Government of Tamil Nadu</h2>
                     </div> -->
 
-                    <div class="msh-logo d-flex align-items-center"><img src="../assets/Images/MSH Logo.png"
+                    <div class="msh-logo d-flex align-items-center"><img src="./assets/Images/MSH Logo.png"
                             alt="Migrant Support Hub Logo" class="img" width="100">
                         <h3>Migrant Support Hub</h3>
                     </div>
@@ -46,32 +47,38 @@
                             <a class="nav-link active" aria-current="page" href="#hero">Home</a>
                         </li>
                         <!-- Dropdown for About -->
+                        <!-- About -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown">About</a>
-                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                                <li><a class="dropdown-item" href="#">Our Journey</a></li>
-                                <li><a class="dropdown-item" href="#">Our Mission</a></li>
-                                <li><a class="dropdown-item" href="#">Our Vision</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown"
+                                data-bs-toggle="dropdown">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="info.html#journey">Our Journey</a></li>
+                                <li><a class="dropdown-item" href="info.html#mission">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="info.html#vision">Our Vision</a></li>
                             </ul>
                         </li>
-                        <!-- Dropdown for Services -->
+
+                        <!-- Services -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
-                                role="button">Services</a>
-                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#">Complaint Registration</a></li>
-                                <li><a class="dropdown-item" href="#">Tracking Support</a></li>
-                                <li><a class="dropdown-item" href="#">Legal Support</a></li>
+                                data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="info.html#complaint">Complaint Registration</a></li>
+                                <li><a class="dropdown-item" href="info.html#tracking">Tracking Support</a></li>
+                                <li><a class="dropdown-item" href="info.html#legal">Legal Support</a></li>
                             </ul>
                         </li>
-                        <!-- Dropdown for Contact -->
+
+                        <!-- Contact -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button">Contact</a>
-                            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-                                <li><a class="dropdown-item" href="#">Helpline Number</a></li>
-                                <li><a class="dropdown-item" href="#">E-mail Support</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown"
+                                data-bs-toggle="dropdown">Contact</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="info.html#helpline">Helpline Number</a></li>
+                                <li><a class="dropdown-item" href="info.html#email">E-mail Support</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#register">How to Register?</a>
                         </li>
@@ -82,8 +89,8 @@
                             Login
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="loginMenuButton">
-                            <li><a class="dropdown-item user" href="#login" id="userlogin">For Users</a></li>
-                            <li><a class="dropdown-item" href="../admin/adminlogin.html" id="adminlogin">For
+                            <li><a class="dropdown-item user" href="#login" id="userlogin"> Users</a></li>
+                            <li><a class="dropdown-item" href="../admin/adminlogin.html" id="adminlogin">
                                     Officials</a></li>
                         </ul>
                     </div>
@@ -92,58 +99,59 @@
         </nav>
     </header>
 
-<!-- Pop up -->
-<div class="popup">
-    <div class="cancel"><button>&times;</button></div>
+    <!-- Pop up -->
+    <div class="popup">
+        <div class="cancel"><button>&times;</button></div>
 
-    <form id="loginForm" class="login-form">
-        <h3 class="text-center">Login</h3>
-        <label for="login-email">Email</label>
-        <input type="email" name="email" id="login-email" required>
+        <form id="loginForm" class="container mx-auto login-form">
+            <h3 class="text-center">Login</h3>
+            <label for="login-email">Email</label>
+            <input type="email" name="email" id="login-email" required>
 
-        <label for="login-password">Password</label>
-        <input type="password" name="password" id="login-password" required>
+            <label for="login-password">Password</label>
+            <input type="password" name="password" id="login-password" required>
 
-        <div class="d-flex justify-content-between form-btn">
-            <a href="#">Forgot your password?</a>
-            <button type="submit" class="btn btn-primary login-button">Login</button>
-        </div>
+            <div class="d-flex justify-content-between form-btn">
+                <a href="#">Forgot your password?</a>
+                <button type="submit" class="btn btn-primary login-button">Login</button>
+            </div>
 
-        <hr style="height:2px;">
+            <hr style="height:2px;">
 
-        <div class="signup d-flex">
-            <p>Don't have an account?</p>
-            <a href="#signup" id="signup-link">Sign up</a>
-        </div>
-    </form>
+            <div class="signup d-flex">
+                <p>Don't have an account?</p>
+                <a href="#signup" id="signup-link">Sign up</a>
+            </div>
+        </form>
 
-    <form action="/signup" method="POST" class="signup-form" id="signup">
-        <h4 class="text-center">Sign Up</h4>
+        <form action="/signup" method="POST" class="signup-form" id="signup">
+            <h4 class="text-center">Sign Up</h4>
 
-        <label for="signup-username">Username</label>
-        <input type="text" name="username" id="signup-username" placeholder="Choose a username" required>
+            <label for="signup-username">Username</label>
+            <input type="text" name="username" id="signup-username" placeholder="Choose a username" required>
 
-        <label for="signup-email">Email</label>
-        <input type="email" name="email" id="signup-email" placeholder="Enter your email" required>
+            <label for="signup-email">Email</label>
+            <input type="email" name="email" id="signup-email" placeholder="Enter your email" required>
 
-        <label for="signup-password">Password</label>
-        <input type="password" name="password" id="signup-password" placeholder="Create a password" required>
+            <label for="signup-password">Password</label>
+            <input type="password" name="password" id="signup-password" placeholder="Create a password" required>
 
-        <label for="signup-confirm-password">Confirm Password</label>
-        <input type="password" name="confirm-password" id="signup-confirm-password" placeholder="Confirm your password" required>
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="signup-confirm-password"
+                placeholder="Confirm your password" required>
 
-        <div class="d-flex justify-content-center form-btn">
-            <button type="submit" class="btn btn-primary">Sign Up</button>
-        </div>
+            <div class="d-flex justify-content-center form-btn">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
 
-        <hr style="height: 2px;">
+            <hr style="height: 2px;">
 
-        <div class="login d-flex">
-            <p>Already have an account?</p>
-            <a href="#login" id="login-link">Login here</a>
-        </div>
-    </form>
-</div>
+            <div class="login d-flex">
+                <p>Already have an account?</p>
+                <a href="#login" id="login-link">Login here</a>
+            </div>
+        </form>
+    </div>
 
     <div class="overlay"></div>
 
@@ -152,7 +160,7 @@
         <div
             class="hero-content container d-flex flex-column-reverse flex-md-row justify-content-between align-items-center p-5">
             <div class="hero-head w-100 text-center text-md-start">
-                <img src="../assets/Images/Migrant Workers.jpg" alt="Migrant Workers" class="w-100">
+                <img src="./assets/Images/Migrant Workers.jpg" alt="Migrant Workers" class="w-100">
             </div>
         </div>
     </section>
@@ -176,7 +184,7 @@
         </div>
     </section>
     <div class="home-button">
-        <button class="btn">
+        <button class="btn home-btn">
             <a href="#">Back to home</a>
         </button>
     </div>
@@ -192,7 +200,7 @@
             <!-- Services Box -->
             <div class="services-box text-center mx-auto">
                 <ul class="services-links">
-                    <li><a href="#">Tracking Support</a></li>
+                    <li><a href="./landing_page/info.html#tracking">Tracking Support</a></li>
                     <li><a href="#">Legal Support</a></li>
                     <li><a href="#">Education and Training</a></li>
                 </ul>
@@ -208,7 +216,7 @@
             <!-- Step 1 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width: 17rem;">
                 <span>1</span>
-                <img src="../assets/Images/login.jpg" class="card-img-top" alt="login image">
+                <img src="./assets/Images/login.jpg" class="card-img-top" alt="login image">
                 <div class="card-body">
                     <h5 class="card-title">Step 1: Create an Account</h5>
                     <ul>
@@ -223,7 +231,7 @@
             <!-- Step 2 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width: 17rem;">
                 <span>2</span>
-                <img src="../assets/Images/Verify.jpg" class="card-img-top" alt="verification image">
+                <img src="./assets/Images/Verify.jpg" class="card-img-top" alt="verification image">
                 <div class="card-body">
                     <h5 class="card-title">Step 2: Verify Email</h5>
                     <ul>
@@ -239,7 +247,7 @@
             <!-- Step 3 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width:17rem;">
                 <span>3</span>
-                <img src="../assets/Images/form1.jpg" class="card-img-top" alt="form image">
+                <img src="./assets/Images/form1.jpg" class="card-img-top" alt="form image">
                 <div class="card-body">
                     <h5 class="card-title">Step 3: Complete Profile</h5>
                     <ul>
@@ -254,7 +262,7 @@
             <!-- Step 4 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width: 17rem;">
                 <span>4</span>
-                <img src="../assets/Images/services.jpg" class="card-img-top" alt="service image">
+                <img src="./assets/Images/services.jpg" class="card-img-top" alt="service image">
                 <div class="card-body">
                     <h5 class="card-title">Step 4: Select Services</h5>
                     <ul>
@@ -269,7 +277,7 @@
             <!-- Step 5 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width: 17rem;">
                 <span>5</span>
-                <img src="../assets/Images/confirmation.jpeg" class="card-img-top" alt="confiramtion image">
+                <img src="./assets/Images/confirmation.jpeg" class="card-img-top" alt="confiramtion image">
                 <div class="card-body">
                     <h5 class="card-title">Step 5: Final Confirmation</h5>
                     <ul>
@@ -284,7 +292,7 @@
             <!-- Step 6 Card -->
             <div class="card mx-auto mt-4 mb-3" style="width: 16rem;">
                 <span>6</span>
-                <img src="../assets/Images/welcome.jpg" class="card-img-top" alt="welcome image">
+                <img src="./assets/Images/welcome.jpg" class="card-img-top" alt="welcome image">
                 <div class="card-body">
                     <h5 class="card-title">Step 6: Start Using Services</h5>
                     <ul>
@@ -306,7 +314,7 @@
             <div class="row">
                 <!-- Logo Section -->
                 <div class="col-md-4 footer-logo">
-                    <img src="../assets/Images/MSH Logo.png" alt="Migrant Support Hub Logo" class="img-fluid"
+                    <img src="./assets/Images/MSH Logo.png" alt="Migrant Support Hub Logo" class="img-fluid"
                         width="200">
                 </div>
 
@@ -324,8 +332,8 @@
                 <div class="col-md-4 footer-contact">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><img src="./Images/Phone icon.png" alt=""> 0987656789</li>
-                        <li><img src="./Images/email-icon.png" alt="">
+                        <li><img src="./assets/Images/Phone icon.png" alt="phoneIcon"> 0987656789</li>
+                        <li><img src="./assets/Images/email-icon.png" alt="email-icon">
                             <a href="mailto:migrantsupport@gmail.com">migrantsupport@gmail.com</a>
                         </li>
                         <li><strong>Location:</strong> Tamil Nadu, India</li>

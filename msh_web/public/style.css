@@ -2,6 +2,8 @@
     list-style: none;
 }
 
+
+
 body {
     font-family: 'Times New Roman', Times, serif;
     overflow-x: hidden;
@@ -99,7 +101,7 @@ body {
 @media (max-width:700px) {
     .popup {
         top: 10%;
-        left: 20%;
+        left: 20px;
     }
 
 }

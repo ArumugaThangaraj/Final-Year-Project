@@ -89,10 +89,9 @@ body {
 }
 
 .user_image {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 50%;
   display: block;
   margin:0 auto;
   
@@ -119,11 +118,11 @@ body {
   background: rgba(28, 73, 118,0.6);
   color: white;
   scale: 0.8;
-  transition: 0.1s;
+  transition: transform 0.3s ease-in-out;
 }
 .card:hover{
   background: rgba(28, 73, 118,1);
-  scale: 1;
+  transform: translateY(-10px);
 }
 .card-section{
   margin-top: 80px;

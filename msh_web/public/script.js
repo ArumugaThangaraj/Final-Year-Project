@@ -6,13 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const userLogin = document.getElementById("userlogin");
     const signupBtn = document.getElementById("signup-link");
     const loginBtn = document.getElementById("login-link");
+    const homeBtn = document.querySelector(".home-btn");
     const cancelBtn = document.querySelector(".cancel button");
+
 
     // Open login popup
     userLogin.addEventListener("click", () => {
         showPopup();
         signupForm.style.display = "none";
         loginForm.style.display = "block";
+        homeBtn.style.display = "none";
     });
 
     // Open signup popup
@@ -71,3 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Login form not found!");
     }
 });
+
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'fr,hi,es,ta',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
+}
