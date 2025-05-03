@@ -43,7 +43,7 @@ body {
     position: sticky;
     top: 80px;
     z-index: 999;
-    background: white;
+    background:transparent;
     padding: 10px;
     text-align: center;
 }
